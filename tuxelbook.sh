@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 echo '
   _______             _ _                 _     _____  ____
@@ -33,7 +33,7 @@ fi
 
 # Setup Audio
 if prompt_user "The following script will setup the audio on the Pixelbook Go, would you like to continue?" "(yes/y, skip/s, exit/e/x)"; then
-    sudo su
+    cd
     git clone https://github.com/WeirdTreeThing/chromebook-linux-audio.git
     cd chromebook-linux-audio/
     ./setup-audio
