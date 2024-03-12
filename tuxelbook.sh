@@ -52,5 +52,5 @@ if prompt_user "The following script will run the firmware updater/remover, woul
     cd
     git clone https://github.com/MrChromebox/scripts
     cd scripts/
-    sh sudo firmware-util.sh
+    sh firmware-util.sh
 fi
