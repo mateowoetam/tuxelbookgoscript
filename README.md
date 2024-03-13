@@ -26,6 +26,14 @@ This Bash script automates the setup process for audio configuration, keyboard l
 
 3. Follow the prompts to configure audio, keyboard layout, and firmware according to your preferences.
 
+
+### Known Issues:
+I still haven't figured out how to map the assistant key so for now it does nothing, maybe there's a way on X11 with xf86tools or equivalent but I have no way to know because all my devices are on Wayland
+I recomment runing MrChromebox's firmware utility by itself rather than with this script as it fails (in a non-destructive way, it just fails to download)
+
+#### warnings:
+This code has only been tested on Pixelbook Go running Nobara 39, but presumably works on other Fedora/RHEL based distos, and distros that use the same mapings for kebyard (xkb) like Debian, Arch, Ubuntu, Pop!_OS, (this is rather dependant ont he Destkop Environment/Window Manager I believe though, it works with, it has been tested to work with KDE Plasma 6 and GNOME 45
+
 ### Contributions:
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
