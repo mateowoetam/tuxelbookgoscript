@@ -29,6 +29,10 @@ prompt_user() {
 # Setup Keyboard
 if prompt_user "The following script will setup the keyboard on the Pixelbook Go, would you like to continue?" "(yes/y, skip/s, exit/e/x)"; then
     sudo cp 60-keyboard.hwdb root/lib/udev/hwdb.d
+    cd
+    git clone https://github.com/WeirdTreeThing/cros-keyboard-map
+    cd cros-keyboard-map
+    ./install.sh
 fi
 
 # Setup Audio
