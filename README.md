@@ -5,9 +5,9 @@ This Bash script automates the setup process for audio configuration, keyboard l
 ### Features:
 
 - **Audio Setup**: Configures audio settings for optimal performance on the Pixelbook Go.
-- **Keyboard Setup**: Sets up the keyboard layout, including remapping keys for better usability.
+- **Keyboard Setup**: Sets up the keyboard layout, including remapping keys for better usability, ingluding capslock and Assistant key
 - **Halmak Keyboard Layout**: Optionally installs the Halmak keyboard layout for users preferring this alternative layout.
-- **Firmware Management**: Provides options to update or revert to default firmware using MrChromebox's firmware utility.
+- **Firmware Management**: Provides options to update or revert to default firmware using MrChromebox's firmware utility. (known not to always work correctly)
 
 ### Usage:
 
@@ -26,10 +26,8 @@ This Bash script automates the setup process for audio configuration, keyboard l
 
 3. Follow the prompts to configure audio, keyboard layout, and firmware according to your preferences.
 
-
-### Known Issues:
-I still haven't figured out how to map the assistant key so for now it does nothing, maybe there's a way on X11 with xf86tools or equivalent but I have no way to know because all my devices are on Wayland
-I recomment runing MrChromebox's firmware utility by itself rather than with this script as it fails (in a non-destructive way, it just fails to download)
+### Known issues:
+the MrChromebox script sometimes doesn't run correctly inside the script, it is best to run it yourself independently.
 
 #### warnings:
 This code has only been tested on Pixelbook Go running Nobara 39, but presumably works on other Fedora/RHEL based distos, and distros that use the same mapings for kebyard (xkb) like Debian, Arch, Ubuntu, Pop!_OS, (this is rather dependant ont he Destkop Environment/Window Manager I believe though, it works with, it has been tested to work with KDE Plasma 6 and GNOME 45
@@ -40,4 +38,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 
 ### Special Thanks:
-thank you to all the developers who created the scripts this runs, [WeirdTreeThing](https://github.com/WeirdTreeThing) for [Chromebook Linux Audio](https://github.com/WeirdTreeThing/](https://github.com/WeirdTreeThing/chromebook-linux-audio)https://github.com/WeirdTreeThing/chromebook-linux-audio), [mirrorsonthewall](https://github.com/mirrorsonthewall) for [Halmak Linux Support](https://github.com/mirrorsonthewall/halmaklinuxsupport), and [MrChromebox](https://github.com/MrChromebox) for [MrChromebox Scripts](https://github.com/MrChromebox/scriptsy)
+thank you to all the developers who created the scripts this runs, [WeirdTreeThing](https://github.com/WeirdTreeThing) for [Chromebook Linux Audio](https://github.com/WeirdTreeThing/](https://github.com/WeirdTreeThing/chromebook-linux-audio)https://github.com/WeirdTreeThing/chromebook-linux-audio), [mirrorsonthewall](https://github.com/mirrorsonthewall) for [Halmak Linux Support](https://github.com/mirrorsonthewall/halmaklinuxsupport), and [MrChromebox](https://github.com/MrChromebox) for [MrChromebox Scripts](https://github.com/MrChromebox/scriptsy), and u/Administrative-Elk74 for telling me about udev rules
