@@ -30,7 +30,7 @@ This Bash script automates the setup process for audio configuration, keyboard l
 the MrChromebox script sometimes doesn't run correctly inside the script, it is best to run it yourself independently.
 
 #### warnings:
-This code has only been tested on Pixelbook Go running Nobara 39, but presumably works on other Fedora/RHEL based distos, and distros that use the same mapings for kebyard (xkb) like Debian, Arch, Ubuntu, Pop!_OS, (this is rather dependant ont he Destkop Environment/Window Manager I believe though, it works with, it has been tested to work with KDE Plasma 6 and GNOME 45
+This code has only been tested on Pixelbook Go running Nobara 39, but presumably works on other Fedora/RHEL based distos, and distros that use the same mapings for keyboard (xkb) like Debian, Arch, Ubuntu, Pop!_OS, (this is rather dependant ont he Destkop Environment/Window Manager I believe though, it works with, it has been tested to work with KDE Plasma 6 and GNOME 45
 
 ### Contributions:
 
