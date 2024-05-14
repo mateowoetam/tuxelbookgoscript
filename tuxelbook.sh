@@ -28,7 +28,7 @@ prompt_user() {
 
 # Setup Keyboard
 if prompt_user "The following script will setup the keyboard on the Pixelbook Go, would you like to continue?" "(yes/y, skip/s, exit/e/x)"; then
-    sudo cp pc /usr/share/X11/xkb/symbols/
+    sudo cp 60-keyboard.hwdb root/lib/udev/hwdb.d
 fi
 
 # Setup Audio
