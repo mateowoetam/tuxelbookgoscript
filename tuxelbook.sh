@@ -26,6 +26,27 @@ prompt_user() {
     done
 }
 
+# Function to copy Halmak files and handle errors
+copy_halmak_files() {
+    local halmak_dir="$1"
+    local config_symbols_dir="/home/$USER/.config/xkb/symbols"
+    local config_rules_dir="/home/$USER/.config/xkb/rules"
+    local src_symbols="$halmak_dir/zz"
+    local src_rules="$halmak_dir/evdev.xml"
+    local dest_symbols="$config_symbols_dir/zz"
+    local dest_rules="$config_rules_dir/evdev.xml"
+
+    mkdir -p "$config_symbols_dir" "$config_rules_dir"
+
+    if ! cp "$src_symbols" "$dest_symbols" || ! cp "$src_rules" "$dest_rules"; then
+        echo "Failed to copy files to $dest_symbols and $dest_rules."
+        exit 1
+    fi
+
+    echo "After restarting, open your system's keyboard settings."
+    echo "Add a new input source, select 'Other', and then choose 'Halmak' from the list."
+}
+
 # Setup Keyboard
 if prompt_user "The following script will setup the keyboard on the Pixelbook Go, would you like to continue?" "(yes/y, skip/s, exit/e/x)"; then
     sudo cp 60-keyboard.hwdb root/lib/udev/hwdb.d
@@ -46,9 +67,9 @@ fi
 # Setup Halmak Keyboard Layout
 if prompt_user "The following script will setup the Halmak keyboard layout, would you like to continue?" "(yes/y, skip/s, exit/e/x)"; then
     cd
-    git clone https://github.com/mirrorsonthewall/halmaklinuxsupport.git
+    git clone https://github.com/mateowoetam/halmaklinuxsupport.git
     cd halmaklinuxsupport/halmak-linux/
-    sudo cp zz /usr/share/X11/xkb/symbols/ && cp evdev.xml /usr/share/X11/xkb/rules/
+    copy_halmak_files "$(pwd)"
 fi
 
 # Firmware Update/Removal
