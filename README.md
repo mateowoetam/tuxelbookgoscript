@@ -4,7 +4,7 @@ This Bash script automates the setup process for audio configuration, keyboard l
 
 ### Features:
 
-- **Audio Setup**: Configures audio settings for optimal performance on the Pixelbook Go.
+- **Audio Setup**: Configures audio settings for optimal performance on the Pixelbook Go. Tested recently on Fedora, no longer necesary since audio drivers are included in newer kernels.
 - **Keyboard Setup**: Sets up the keyboard layout, including remapping keys for better usability, including capslock and Assistant key
 - **Halmak Keyboard Layout**: Optionally installs the Halmak keyboard layout for users preferring this alternative layout.
 - **Firmware Management**: Provides options to update or revert to default firmware using MrChromebox's firmware utility. (known not to always work correctly)
