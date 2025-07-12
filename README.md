@@ -31,7 +31,7 @@ the MrChromebox script sometimes doesn't run correctly inside the script, it is 
 
 #### warnings:
 This code has only been tested on Pixelbook Go running Fedora 42, but presumably works on other Fedora/RHEL based distos, and distros that use the same mapings for keyboard (xkb) like Debian, Arch, Ubuntu, Pop!_OS, (this is rather dependant ont he Destkop Environment/Window Manager I believe though, it works with, it has been tested to work with KDE Plasma 6 and GNOME 45.)
-It will not work on immutable or declarstive distros like uBlue or NixOS.
+It will not work on immutable or declarative distros like uBlue or NixOS.
 
 ### Contributions:
 
