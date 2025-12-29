@@ -1,6 +1,10 @@
+## Project migration
+I've migrated away from GitHub into Codeberg so the project is now only going to receive updates there.
+You can find the new repo [here](https://codeberg.org/mateowoetam/tuxelbookgoscript).
+
 ## Pixelbook Go Linux Setup Script / TuxelbookGo script
 
-This Bash script automates the setup process for audio configuration, keyboard layout, and firmware updates on the Google Pixelbook Go when running Linux.
+This Shell script automates the setup process for audio configuration, keyboard layout, and firmware updates on the Google Pixelbook Go when running Linux.
 
 ### Features:
 
